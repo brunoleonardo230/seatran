@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
 	public function index()
 	{
-		$title = 'Home';
+		$title = 'Enviar Arquivo';
 
 		return view('home', compact('title'));
 	}
