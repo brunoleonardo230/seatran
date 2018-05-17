@@ -1,5 +1,13 @@
 @extends('layouts.master')
 @section('content')
+<style type="text/css">
+    #scroll {
+        width:900px;
+        height:370px;
+        background-color:#F2F2F2;
+        overflow:auto;
+    }
+</style>
 <div class="row">
     <div class="col-md-12">
         <h1>{{ $title }}</h1>
@@ -35,10 +43,11 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        <div id="scroll">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Resemha</th>
+                                    <th>Resenha</th>
                                     <th>Objeto</th>
                                     <th>Pares</th>
                                     <th>Valor</th>
@@ -55,7 +64,8 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="col-md-12"><center>{{ $convenio->links() }}</center></div>
+                        </div>
+                        
                     </div>
                 </div>
                 <h1>Totais Anos</h1>
