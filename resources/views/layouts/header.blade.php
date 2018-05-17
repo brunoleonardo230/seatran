@@ -9,7 +9,7 @@
                     <a href="{{ url('/') }}"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Enviar Arquivo</a>
                 </li>
                 <li>
-                    <a href="{{ url('/listar') }}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Convênios</a>
+                    <a href="{{ url('/convenio') }}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Convênios</a>
                 </li>   
             </ul>
         </div>
