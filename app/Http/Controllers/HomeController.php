@@ -2,7 +2,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Http\Model\Convenio;
 use Illuminate\Support\Facades\Validator;
 
@@ -36,6 +35,17 @@ class HomeController extends Controller
 		    ->withErrors($validator)
 		    ->withInput();
 
+		}else{
+
+			\Excel::load($request->file('convenio'), function($reader){
+	            $reader->each(function($arrayDados)
+	            {                   
+	                Convenio::setConvenio($arrayDados);
+
+	            });
+	        });
+
+	        return redirect('/');
 		}
 
 		
