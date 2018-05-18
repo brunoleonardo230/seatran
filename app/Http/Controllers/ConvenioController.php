@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Model\Convenio;
 use App\Http\Model\Soma;
-use Illuminate\Support\Facades\DB;
+
 
 class ConvenioController extends Controller
 {
@@ -24,7 +24,7 @@ class ConvenioController extends Controller
 						->orderBy('nome_municipio','ASC')
 						->get();
 
-		$soma = Soma::orderBy('ano','asc')->get();
+		$soma = Soma::get();
 
 
 		return view('convenio', compact('title','convenio','municipio','soma'));

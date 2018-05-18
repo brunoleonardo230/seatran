@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Model\Convenio;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class HomeController extends Controller
 {
@@ -45,7 +46,10 @@ class HomeController extends Controller
 	            });
 	        });
 
-	        return redirect('/');
+	        DB::connection('pgsql')
+	        ->select("SELECT soma()");
+
+	        return redirect('/convenio');
 		}
 
 		
