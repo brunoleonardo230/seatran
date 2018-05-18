@@ -23,6 +23,7 @@
             <table id="minhaTabela" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
+                        <th>Municipio</th>
                         <th>Ano</th>
                         <th>Resenha</th>
                         <th>Objeto</th>
@@ -33,6 +34,7 @@
                 <tbody>
                     @foreach($convenio as $value)
                     <tr>
+                        <td>{{ $value->nome_municipio }}</td>
                         <td>{{ $value->ano }}</td>
                         <td>{{ substr($value->resenha,0,40) }}</td>
                         <td>{{ substr($value->objeto,0,40) }}...</td>
